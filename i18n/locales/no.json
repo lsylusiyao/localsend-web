@@ -8,7 +8,7 @@
     "webCryptoNotSupported": "Browserversionen din støtter ikke LocalSend: Web Crypto API er nødvendig.",
     "empty": {
       "title": "Åpne LocalSend på en annen enhet.",
-      "deviceHint": "Åpne denne siden i en annen nettleser eller native versjon (v1.18.0 eller nyere).",
+      "deviceHint": "Åpne denne siden i en annen nettleser. Støtte for den native appen kommer i en fremtidig versjon.",
       "lanHint": "Kun enheter i samme nettverk vises."
     },
     "you": "Du er:",

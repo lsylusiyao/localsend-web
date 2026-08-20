@@ -8,7 +8,7 @@
     "webCryptoNotSupported": "Tu navegador no es compatible con LocalSend: se requiere la API Web Crypto.",
     "empty": {
       "title": "Abre LocalSend en otro dispositivo.",
-      "deviceHint": "Abre este sitio en otro navegador o en la versión nativa (v1.18.0 o posterior).",
+      "deviceHint": "Abre este sitio en otro navegador. La compatibilidad con la aplicación nativa se añadirá en una versión futura.",
       "lanHint": "Solo se muestran dispositivos en la misma red."
     },
     "you": "Tú eres:",

@@ -8,7 +8,7 @@
     "webCryptoNotSupported": "A böngésződ nem támogatja a LocalSendet, mert a Web Crypto API szükséges hozzá.",
     "empty": {
       "title": "Nyisd meg a LocalSendet egy másik eszközön is.",
-      "deviceHint": "Nyisd meg ezt az oldalt a böngésződben vagy natív alkalmazásban (v1.18.0 vagy újabb).",
+      "deviceHint": "Nyisd meg ezt az oldalt egy másik böngészőben. A natív alkalmazás támogatása egy későbbi verzióban érkezik.",
       "lanHint": "Csak a jelen hálózaton lévő eszközök láthatóak."
     },
     "you": "A neved:",

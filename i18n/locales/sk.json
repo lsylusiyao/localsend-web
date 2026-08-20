@@ -8,7 +8,7 @@
     "webCryptoNotSupported": "Váš prehliadač nepodporuje LocalSend: vyžaduje sa Web Crypto API.",
     "empty": {
       "title": "Otvorte LocalSend na druhom zariadení.",
-      "deviceHint": "Otvorte túto stránku v inom prehliadači alebo v natívnej verzii (v1.18.0 alebo novšej).",
+      "deviceHint": "Otvorte túto stránku v inom prehliadači. Podpora natívnej aplikácie bude pridaná v budúcej verzii.",
       "lanHint": "Zobrazia sa len zariadenia v tej istej sieti."
     },
     "you": "Ste:",
