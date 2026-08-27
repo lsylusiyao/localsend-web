@@ -8,12 +8,6 @@ export default defineNuxtConfig({
     "@vite-pwa/nuxt",
   ],
   devtools: { enabled: true },
-  runtimeConfig: {
-    public: {
-      signalingUrl:
-        process.env.SIGNALING_URL ?? "wss://public.localsend.org/v1/ws",
-    },
-  },
   app: {
     head: {
       link: [
@@ -25,6 +19,11 @@ export default defineNuxtConfig({
           rel: "apple-touch-icon",
           sizes: "180x180",
           href: "/apple-touch-icon.png",
+        },
+      ],
+      script: [
+        {
+          src: "/runtime-config.js",
         },
       ],
     },
@@ -149,6 +148,7 @@ export default defineNuxtConfig({
     },
     workbox: {
       globPatterns: ["/", "**/*.{js,css,html,png,svg,ico}"],
+      globIgnores: ["**/runtime-config.js"],
       navigateFallback: "/",
       runtimeCaching: [
         {

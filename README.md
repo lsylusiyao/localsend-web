@@ -36,11 +36,11 @@ pnpm run generate
 
 1. Clone this repo
 2. Build: `docker build --tag localsend-web --file Containerfile .`
-3. Run: `docker run --rm --publish 8080:443 --volume caddy-data:/data localsend-web`
+3. Run: `docker run --rm -e SIGNALING_URL=wss://your-signaling.example/ws --publish 8080:443 --volume caddy-data:/data localsend-web`
 
 **Note**:
 The web app requires a signaling server to work. By default, it uses the public signaling server at `wss://public.localsend.org/v1/ws`.
-You can change this by setting the `SIGNALING_URL` environment variable during `pnpm run generate`.
+You can change this at container runtime by setting the `SIGNALING_URL` environment variable on `docker run`.
 
 To be fully self-hosted, you can also deploy your own [signaling server](https://github.com/localsend/localsend/tree/main/server).
 

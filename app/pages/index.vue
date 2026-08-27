@@ -84,6 +84,7 @@ import {
   store,
   updateAliasState,
 } from "@/services/store";
+import { getSignalingUrl } from "~/utils/runtimeConfig";
 import { getAgentInfoString } from "~/utils/userAgent";
 import { protocolVersion } from "~/services/webrtc";
 import { generateRandomAlias } from "~/utils/alias";
@@ -102,7 +103,7 @@ definePageMeta({
   description: "index.seo.description",
 });
 
-const runtimeConfig = useRuntimeConfig();
+const signalingUrl = getSignalingUrl();
 
 const { t } = useI18n();
 
@@ -196,7 +197,7 @@ onMounted(async () => {
   };
 
   await setupConnection({
-    url: runtimeConfig.public.signalingUrl,
+    url: signalingUrl,
     info,
     onPin: async () => {
       return prompt(t("index.enterPin"));
