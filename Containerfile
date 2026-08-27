@@ -14,8 +14,13 @@ COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 COPY <<"EOT" /etc/caddy/Caddyfile
 https:// {
-    file_server
     root * /usr/share/caddy
+    handle /ws* {
+        reverse_proxy signaling:3000
+    }
+    handle {
+        file_server
+    }
     header /runtime-config.js Cache-Control "no-store"
     tls internal {
 	    on_demand

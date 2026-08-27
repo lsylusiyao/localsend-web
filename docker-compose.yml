@@ -1,0 +1,27 @@
+services:
+  signaling:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    container_name: localsend-signaling
+    expose:
+      - "3000"
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: Containerfile
+    container_name: localsend-web
+    depends_on:
+      - signaling
+    environment:
+      SIGNALING_URL: ${SIGNALING_URL:?set SIGNALING_URL to your browser-reachable WSS endpoint}
+    ports:
+      - "443:443"
+    volumes:
+      - caddy-data:/data
+    restart: unless-stopped
+
+volumes:
+  caddy-data:
